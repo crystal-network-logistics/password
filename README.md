@@ -3,21 +3,9 @@
 #### 介绍
 随机密码生成器
 
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  参考仓库 [https://gitee.com/yangxinyun/rnd-password](https://gitee.com/yangxinyun/rnd-password)
 
 #### 参与贡献
 
