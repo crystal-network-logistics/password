@@ -76,25 +76,7 @@ const copyInfo = document.querySelector(".result__info.right");
 // 单击“复制”按钮后出现文本
 const copiedInfo = document.querySelector(".result__info.left");
 
-// 更新复制按钮的Css属性
-// 获取结果viewbox容器的边界
-let resultContainerBound = {
-    left: resultContainer.getBoundingClientRect().left,
-    top: resultContainer.getBoundingClientRect().top,
-};
-// 这将根据鼠标定位器更新复制按钮的位置
-resultContainer.addEventListener("mousemove", e => {
-    copyBtn.style.setProperty("--x", `${e.x - resultContainerBound.left}px`);
-    copyBtn.style.setProperty("--y", `${e.y - resultContainerBound.top}px`);
-});
-window.addEventListener("resize", e => {
-    resultContainerBound = {
-        left: resultContainer.getBoundingClientRect().left,
-        top: resultContainer.getBoundingClientRect().top,
-    };
-});
-
-// 在剪贴板中复制密码
+// 复制密码到剪贴板
 copyBtn.addEventListener("click", () => {
     const textarea = document.createElement("textarea");
     const password = resultEl.innerText;
@@ -113,7 +95,7 @@ copyBtn.addEventListener("click", () => {
     copiedInfo.style.opacity = "0.75";
 });
 
-// 单击“生成”时，将生成密码id。
+// 单击“生成”时，将生成密码
 generateBtn.addEventListener("click", () => {
     const length = +lengthEl.value;
     const hasLower = lowercaseEl.checked;
@@ -125,6 +107,8 @@ generateBtn.addEventListener("click", () => {
     copyInfo.style.opacity = "0.75";
     copiedInfo.style.transform = "translateY(200%)";
     copiedInfo.style.opacity = "0";
+    // 自动复制密码到剪切板
+    copyBtn.click();
 });
 
 // 负责生成密码并返回密码的函数。
