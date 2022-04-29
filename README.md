@@ -5,7 +5,9 @@
 
 #### 使用说明
 
-1.  参考仓库 [https://gitee.com/yangxinyun/rnd-password](https://gitee.com/yangxinyun/rnd-password)
+1.  基于 [https://gitee.com/yangxinyun/rnd-password](https://gitee.com/yangxinyun/rnd-password) 二次开发
+
+2.  线上体验版： [http://tools.greatfar.cn/passwd/](http://tools.greatfar.cn/passwd/)
 
 #### 参与贡献
 
